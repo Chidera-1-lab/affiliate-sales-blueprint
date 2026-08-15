@@ -1,0 +1,675 @@
+‎<!DOCTYPE html>
+‎<html lang="en">
+‎<head>
+‎  <meta charset="UTF-8">
+‎  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎
+‎  <title>Affiliate Sales Blueprint | Start Getting More Sales</title>
+‎
+‎  <meta name="description" content="Affiliate Sales Blueprint is a simple step-by-step guide for beginners who want to learn how to generate affiliate sales online.">
+‎
+‎  <style>
+‎    * {
+‎      margin: 0;
+‎      padding: 0;
+‎      box-sizing: border-box;
+‎    }
+‎
+‎    body {
+‎      font-family: Arial, Helvetica, sans-serif;
+‎      line-height: 1.6;
+‎      color: #171717;
+‎      background: #ffffff;
+‎    }
+‎
+‎    a {
+‎      text-decoration: none;
+‎    }
+‎
+‎    .container {
+‎      width: 92%;
+‎      max-width: 1050px;
+‎      margin: auto;
+‎    }
+‎
+‎    /* HERO */
+‎    .hero {
+‎      background: linear-gradient(135deg, #111827, #1e3a8a);
+‎      color: white;
+‎      text-align: center;
+‎      padding: 70px 20px 80px;
+‎    }
+‎
+‎    .badge {
+‎      display: inline-block;
+‎      background: #facc15;
+‎      color: #111827;
+‎      padding: 8px 16px;
+‎      border-radius: 30px;
+‎      font-weight: bold;
+‎      font-size: 14px;
+‎      margin-bottom: 20px;
+‎    }
+‎
+‎    .hero h1 {
+‎      font-size: clamp(38px, 8vw, 70px);
+‎      line-height: 1.05;
+‎      margin-bottom: 20px;
+‎      font-weight: 900;
+‎    }
+‎
+‎    .hero h1 span {
+‎      color: #facc15;
+‎    }
+‎
+‎    .hero p {
+‎      max-width: 700px;
+‎      margin: 0 auto 30px;
+‎      font-size: 18px;
+‎      color: #e5e7eb;
+‎    }
+‎
+‎    .cta {
+‎      display: inline-block;
+‎      background: #facc15;
+‎      color: #111827;
+‎      padding: 16px 28px;
+‎      border-radius: 10px;
+‎      font-weight: 800;
+‎      font-size: 17px;
+‎      transition: 0.2s;
+‎    }
+‎
+‎    .cta:hover {
+‎      transform: translateY(-2px);
+‎      background: #fde047;
+‎    }
+‎
+‎    .small-note {
+‎      margin-top: 14px;
+‎      font-size: 13px;
+‎      color: #d1d5db;
+‎    }
+‎
+‎    /* GENERAL */
+‎    section {
+‎      padding: 70px 20px;
+‎    }
+‎
+‎    .section-title {
+‎      text-align: center;
+‎      font-size: 34px;
+‎      margin-bottom: 15px;
+‎    }
+‎
+‎    .section-subtitle {
+‎      text-align: center;
+‎      max-width: 700px;
+‎      margin: 0 auto 40px;
+‎      color: #6b7280;
+‎    }
+‎
+‎    /* PROBLEM */
+‎    .problem {
+‎      background: #f8fafc;
+‎    }
+‎
+‎    .problem-list {
+‎      max-width: 700px;
+‎      margin: 30px auto;
+‎      display: grid;
+‎      gap: 15px;
+‎    }
+‎
+‎    .problem-item {
+‎      background: white;
+‎      padding: 18px;
+‎      border-radius: 10px;
+‎      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+‎    }
+‎
+‎    /* PRODUCT */
+‎    .product-section {
+‎      text-align: center;
+‎    }
+‎
+‎    .product-box {
+‎      max-width: 800px;
+‎      margin: auto;
+‎      background: #f8fafc;
+‎      padding: 40px 25px;
+‎      border-radius: 18px;
+‎    }
+‎
+‎    .product-cover {
+‎      width: 230px;
+‎      height: 300px;
+‎      margin: 0 auto 30px;
+‎      background: linear-gradient(145deg, #111827, #2563eb);
+‎      color: white;
+‎      border-radius: 12px;
+‎      padding: 30px 20px;
+‎      display: flex;
+‎      flex-direction: column;
+‎      justify-content: center;
+‎      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+‎    }
+‎
+‎    .product-cover small {
+‎      color: #facc15;
+‎      font-weight: bold;
+‎      margin-bottom: 15px;
+‎    }
+‎
+‎    .product-cover h3 {
+‎      font-size: 28px;
+‎      line-height: 1.1;
+‎    }
+‎
+‎    /* FEATURES */
+‎    .features {
+‎      background: #f8fafc;
+‎    }
+‎
+‎    .feature-grid {
+‎      display: grid;
+‎      grid-template-columns: repeat(3, 1fr);
+‎      gap: 20px;
+‎    }
+‎
+‎    .feature {
+‎      background: white;
+‎      padding: 25px;
+‎      border-radius: 14px;
+‎      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+‎    }
+‎
+‎    .feature-number {
+‎      width: 40px;
+‎      height: 40px;
+‎      background: #1e3a8a;
+‎      color: white;
+‎      border-radius: 50%;
+‎      display: flex;
+‎      align-items: center;
+‎      justify-content: center;
+‎      font-weight: bold;
+‎      margin-bottom: 15px;
+‎    }
+‎
+‎    .feature h3 {
+‎      margin-bottom: 8px;
+‎    }
+‎
+‎    .feature p {
+‎      color: #6b7280;
+‎    }
+‎
+‎    /* WHO */
+‎    .who-list {
+‎      max-width: 700px;
+‎      margin: 30px auto;
+‎    }
+‎
+‎    .who-list div {
+‎      padding: 14px 0;
+‎      border-bottom: 1px solid #e5e7eb;
+‎    }
+‎
+‎    .check {
+‎      color: #16a34a;
+‎      font-weight: bold;
+‎      margin-right: 8px;
+‎    }
+‎
+‎    /* PRICE */
+‎    .price-section {
+‎      background: #111827;
+‎      color: white;
+‎      text-align: center;
+‎    }
+‎
+‎    .old-price {
+‎      font-size: 20px;
+‎      color: #9ca3af;
+‎      text-decoration: line-through;
+‎      margin-top: 20px;
+‎    }
+‎
+‎    .price {
+‎      font-size: 60px;
+‎      font-weight: 900;
+‎      color: #facc15;
+‎      margin: 5px 0 20px;
+‎    }
+‎
+‎    .price-description {
+‎      max-width: 600px;
+‎      margin: 0 auto 30px;
+‎      color: #d1d5db;
+‎    }
+‎
+‎    /* FAQ */
+‎    .faq {
+‎      max-width: 750px;
+‎      margin: auto;
+‎    }
+‎
+‎    details {
+‎      background: #f8fafc;
+‎      margin-bottom: 12px;
+‎      padding: 18px;
+‎      border-radius: 10px;
+‎    }
+‎
+‎    summary {
+‎      cursor: pointer;
+‎      font-weight: bold;
+‎    }
+‎
+‎    details p {
+‎      margin-top: 12px;
+‎      color: #6b7280;
+‎    }
+‎
+‎    /* FINAL CTA */
+‎    .final-cta {
+‎      text-align: center;
+‎      background: #eff6ff;
+‎    }
+‎
+‎    .final-cta p {
+‎      max-width: 650px;
+‎      margin: 15px auto 25px;
+‎      color: #4b5563;
+‎    }
+‎
+‎    /* FOOTER */
+‎    footer {
+‎      background: #030712;
+‎      color: #9ca3af;
+‎      text-align: center;
+‎      padding: 30px 20px;
+‎      font-size: 14px;
+‎    }
+‎
+‎    /* MOBILE */
+‎    @media (max-width: 750px) {
+‎
+‎      section {
+‎        padding: 55px 18px;
+‎      }
+‎
+‎      .hero {
+‎        padding: 55px 18px 65px;
+‎      }
+‎
+‎      .hero p {
+‎        font-size: 16px;
+‎      }
+‎
+‎      .feature-grid {
+‎        grid-template-columns: 1fr;
+‎      }
+‎
+‎      .section-title {
+‎        font-size: 28px;
+‎      }
+‎
+‎      .price {
+‎        font-size: 48px;
+‎      }
+‎
+‎      .cta {
+‎        width: 100%;
+‎        max-width: 350px;
+‎      }
+‎    }
+‎  </style>
+‎</head>
+‎
+‎<body>
+‎
+‎  <!-- HERO -->
+‎  <header class="hero">
+‎    <div class="container">
+‎
+‎      <div class="badge">BEGINNER-FRIENDLY GUIDE</div>
+‎
+‎      <h1>
+‎        AFFILIATE SALES<br>
+‎        <span>BLUEPRINT</span>
+‎      </h1>
+‎
+‎      <p>
+‎        A simple step-by-step guide to understanding affiliate marketing,
+‎        finding potential buyers, creating content and generating more sales online.
+‎      </p>
+‎
+‎      <a class="cta"
+‎         href="https://selar.com/676673m75x"
+‎         target="_blank">
+‎        GET THE BLUEPRINT — ₦2,000
+‎      </a>
+‎
+‎      <div class="small-note">
+‎        Simple • Practical • Beginner-Friendly
+‎      </div>
+‎
+‎    </div>
+‎  </header>
+‎
+‎
+‎  <!-- PROBLEM -->
+‎  <section class="problem">
+‎    <div class="container">
+‎
+‎      <h2 class="section-title">
+‎        Struggling to Get Affiliate Sales?
+‎      </h2>
+‎
+‎      <p class="section-subtitle">
+‎        Having an affiliate link is easy. Knowing how to get the right people
+‎        interested in what you're promoting is where things get confusing.
+‎      </p>
+‎
+‎      <div class="problem-list">
+‎
+‎        <div class="problem-item">
+‎          ❌ You don't know what products to promote.
+‎        </div>
+‎
+‎        <div class="problem-item">
+‎          ❌ You don't know where to find potential buyers.
+‎        </div>
+‎
+‎        <div class="problem-item">
+‎          ❌ You don't know what content to create.
+‎        </div>
+‎
+‎        <div class="problem-item">
+‎          ❌ You're getting attention but struggling to turn it into sales.
+‎        </div>
+‎
+‎        <div class="problem-item">
+‎          ❌ You keep trying random strategies without a clear plan.
+‎        </div>
+‎
+‎      </div>
+‎
+‎    </div>
+‎  </section>
+‎
+‎
+‎  <!-- PRODUCT -->
+‎  <section class="product-section">
+‎    <div class="container">
+‎
+‎      <h2 class="section-title">
+‎        Meet the Affiliate Sales Blueprint
+‎      </h2>
+‎
+‎      <p class="section-subtitle">
+‎        A practical guide created to help beginners understand the basic
+‎        process of generating affiliate sales online.
+‎      </p>
+‎
+‎      <div class="product-box">
+‎
+‎        <div class="product-cover">
+‎          <small>THE</small>
+‎          <h3>AFFILIATE<br>SALES<br>BLUEPRINT</h3>
+‎        </div>
+‎
+‎        <p>
+‎          Instead of jumping between random videos and strategies,
+‎          use one simple roadmap to understand the important steps
+‎          involved in affiliate marketing.
+‎        </p>
+‎
+‎      </div>
+‎
+‎    </div>
+‎  </section>
+‎
+‎
+‎  <!-- WHAT'S INSIDE -->
+‎  <section class="features">
+‎    <div class="container">
+‎
+‎      <h2 class="section-title">
+‎        What's Inside?
+‎      </h2>
+‎
+‎      <p class="section-subtitle">
+‎        Here's what you'll learn inside the blueprint.
+‎      </p>
+‎
+‎      <div class="feature-grid">
+‎
+‎        <div class="feature">
+‎          <div class="feature-number">1</div>
+‎          <h3>Choose the Right Product</h3>
+‎          <p>
+‎            Learn what to consider when choosing an affiliate product to promote.
+‎          </p>
+‎        </div>
+‎
+‎        <div class="feature">
+‎          <div class="feature-number">2</div>
+‎          <h3>Find Your Audience</h3>
+‎          <p>
+‎            Understand who is most likely to be interested in your offer.
+‎          </p>
+‎        </div>
+‎
+‎        <div class="feature">
+‎          <div class="feature-number">3</div>
+‎          <h3>Create Content</h3>
+‎          <p>
+‎            Discover simple content ideas that can attract attention online.
+‎          </p>
+‎        </div>
+‎
+‎        <div class="feature">
+‎          <div class="feature-number">4</div>
+‎          <h3>Generate Leads</h3>
+‎          <p>
+‎            Learn practical ways to get potential customers interested in your offer.
+‎          </p>
+‎        </div>
+‎
+‎        <div class="feature">
+‎          <div class="feature-number">5</div>
+‎          <h3>Turn Interest Into Sales</h3>
+‎          <p>
+‎            Understand how to guide interested people toward making a purchase.
+‎          </p>
+‎        </div>
+‎
+‎        <div class="feature">
+‎          <div class="feature-number">6</div>
+‎          <h3>Avoid Common Mistakes</h3>
+‎          <p>
+‎            Learn some common beginner mistakes and how to avoid them.
+‎          </p>
+‎        </div>
+‎
+‎      </div>
+‎
+‎    </div>
+‎  </section>
+‎
+‎
+‎  <!-- WHO IT'S FOR -->
+‎  <section>
+‎    <div class="container">
+‎
+‎      <h2 class="section-title">
+‎        Is This Blueprint For You?
+‎      </h2>
+‎
+‎      <p class="section-subtitle">
+‎        This guide is designed for beginners who want a clearer starting point.
+‎      </p>
+‎
+‎      <div class="who-list">
+‎
+‎        <div>
+‎          <span class="check">✓</span>
+‎          You're new to affiliate marketing.
+‎        </div>
+‎
+‎        <div>
+‎          <span class="check">✓</span>
+‎          You're trying to get your first affiliate sales.
+‎        </div>
+‎
+‎        <div>
+‎          <span class="check">✓</span>
+‎          You're unsure what content to post.
+‎        </div>
+‎
+‎        <div>
+‎          <span class="check">✓</span>
+‎          You're struggling to find potential buyers.
+‎        </div>
+‎
+‎        <div>
+‎          <span class="check">✓</span>
+‎          You want a simple roadmap to follow.
+‎        </div>
+‎
+‎        <div>
+‎          <span class="check">✓</span>
+‎          You're ready to learn and take action.
+‎        </div>
+‎
+‎      </div>
+‎
+‎    </div>
+‎  </section>
+‎
+‎
+‎  <!-- PRICE -->
+‎  <section class="price-section">
+‎    <div class="container">
+‎
+‎      <h2 class="section-title">
+‎        Start Your Affiliate Sales Journey
+‎      </h2>
+‎
+‎      <div class="old-price">
+‎        Regular Value: ₦5,000
+‎      </div>
+‎
+‎      <div class="price">
+‎        ₦2,000
+‎      </div>
+‎
+‎      <p class="price-description">
+‎        Get the Affiliate Sales Blueprint and learn the basic process
+‎        of finding potential buyers, creating content and generating
+‎        affiliate sales online.
+‎      </p>
+‎
+‎      <a class="cta"
+‎         href="https://selar.com/676673m75x"
+‎         target="_blank">
+‎        GET ACCESS NOW — ₦2,000
+‎      </a>
+‎
+‎      <div class="small-note">
+‎        Launch price
+‎      </div>
+‎
+‎    </div>
+‎  </section>
+‎
+‎
+‎  <!-- FAQ -->
+‎  <section>
+‎    <div class="container">
+‎
+‎      <h2 class="section-title">
+‎        Frequently Asked Questions
+‎      </h2>
+‎
+‎      <div class="faq">
+‎
+‎        <details>
+‎          <summary>Is this guide for beginners?</summary>
+‎          <p>
+‎            Yes. The guide is designed to explain the basic concepts
+‎            in simple language for people who are getting started.
+‎          </p>
+‎        </details>
+‎
+‎        <details>
+‎          <summary>Do I need previous affiliate marketing experience?</summary>
+‎          <p>
+‎            No. The blueprint is designed as a starting point for beginners.
+‎          </p>
+‎        </details>
+‎
+‎        <details>
+‎          <summary>How will I receive the guide?</summary>
+‎          <p>
+‎            After completing your purchase, follow the delivery instructions
+‎            provided on the checkout page.
+‎          </p>
+‎        </details>
+‎
+‎        <details>
+‎          <summary>Does the guide guarantee sales?</summary>
+‎          <p>
+‎            No. Results depend on factors such as your product, audience,
+‎            content, consistency and execution. The blueprint provides
+‎            practical guidance, not a guarantee of income.
+‎          </p>
+‎        </details>
+‎
+‎      </div>
+‎
+‎    </div>
+‎  </section>
+‎
+‎
+‎  <!-- FINAL CTA -->
+‎  <section class="final-cta">
+‎    <div class="container">
+‎
+‎      <h2 class="section-title">
+‎        Stop Guessing. Start Learning.
+‎      </h2>
+‎
+‎      <p>
+‎        You don't need to know everything before you start.
+‎        Give yourself a clear roadmap and begin learning the process
+‎        of generating affiliate sales online.
+‎      </p>
+‎
+‎      <a class="cta"
+‎         href="https://selar.com/676673m75x"
+‎         target="_blank">
+‎        GET THE BLUEPRINT — ₦2,000
+‎      </a>
+‎
+‎    </div>
+‎  </section>
+‎
+‎
+‎  <!-- FOOTER -->
+‎  <footer>
+‎    <p>
+‎      © 2026 Affiliate Sales Blueprint. All rights reserved.
+‎    </p>
+‎
+‎    <p>
+‎      This product provides educational information and does not guarantee
+‎      specific financial results.
+‎    </p>
+‎  </footer>
+‎
+‎</body>
+‎</html>

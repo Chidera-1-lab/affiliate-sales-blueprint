@@ -4,9 +4,12 @@
 ‎  <meta charset="UTF-8">
 ‎  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ‎
-‎  <title>Affiliate Sales Blueprint | Start Getting More Sales</title>
+‎  <title>Affiliate Sales Blueprint | Learn How to Generate More Sales</title>
 ‎
-‎  <meta name="description" content="Affiliate Sales Blueprint is a simple step-by-step guide for beginners who want to learn how to generate affiliate sales online.">
+‎  <meta
+‎    name="description"
+‎    content="Affiliate Sales Blueprint — a simple, beginner-friendly guide to understanding affiliate marketing, finding potential buyers and generating sales online."
+‎  >
 ‎
 ‎  <style>
 ‎    * {
@@ -15,314 +18,636 @@
 ‎      box-sizing: border-box;
 ‎    }
 ‎
+‎    html {
+‎      scroll-behavior: smooth;
+‎    }
+‎
 ‎    body {
 ‎      font-family: Arial, Helvetica, sans-serif;
+‎      background: #070b16;
+‎      color: #ffffff;
 ‎      line-height: 1.6;
-‎      color: #171717;
-‎      background: #ffffff;
+‎      overflow-x: hidden;
 ‎    }
 ‎
 ‎    a {
 ‎      text-decoration: none;
 ‎    }
 ‎
+‎    :root {
+‎      --gold: #f5c451;
+‎      --gold-light: #ffe29a;
+‎      --dark: #070b16;
+‎      --dark2: #0d1426;
+‎      --card: #111a2e;
+‎      --text: #ffffff;
+‎      --muted: #aab4c7;
+‎      --green: #35d07f;
+‎    }
+‎
 ‎    .container {
 ‎      width: 92%;
-‎      max-width: 1050px;
+‎      max-width: 1100px;
 ‎      margin: auto;
 ‎    }
 ‎
-‎    /* HERO */
-‎    .hero {
-‎      background: linear-gradient(135deg, #111827, #1e3a8a);
-‎      color: white;
-‎      text-align: center;
-‎      padding: 70px 20px 80px;
+‎    /* NAVBAR */
+‎
+‎    nav {
+‎      position: sticky;
+‎      top: 0;
+‎      z-index: 1000;
+‎      background: rgba(7, 11, 22, 0.92);
+‎      backdrop-filter: blur(15px);
+‎      border-bottom: 1px solid rgba(255,255,255,0.08);
 ‎    }
 ‎
-‎    .badge {
+‎    .nav-inner {
+‎      height: 70px;
+‎      display: flex;
+‎      align-items: center;
+‎      justify-content: space-between;
+‎    }
+‎
+‎    .logo {
+‎      font-weight: 900;
+‎      letter-spacing: 1px;
+‎      font-size: 17px;
+‎    }
+‎
+‎    .logo span {
+‎      color: var(--gold);
+‎    }
+‎
+‎    .nav-button {
+‎      background: var(--gold);
+‎      color: #111;
+‎      padding: 10px 17px;
+‎      border-radius: 8px;
+‎      font-weight: 800;
+‎      font-size: 13px;
+‎    }
+‎
+‎    /* HERO */
+‎
+‎    .hero {
+‎      position: relative;
+‎      padding: 85px 20px 100px;
+‎      background:
+‎        radial-gradient(circle at 15% 20%, rgba(245,196,81,0.13), transparent 30%),
+‎        radial-gradient(circle at 85% 70%, rgba(37,99,235,0.18), transparent 30%),
+‎        var(--dark);
+‎    }
+‎
+‎    .hero-grid {
+‎      display: grid;
+‎      grid-template-columns: 1.1fr 0.9fr;
+‎      align-items: center;
+‎      gap: 55px;
+‎    }
+‎
+‎    .eyebrow {
 ‎      display: inline-block;
-‎      background: #facc15;
-‎      color: #111827;
-‎      padding: 8px 16px;
-‎      border-radius: 30px;
-‎      font-weight: bold;
-‎      font-size: 14px;
+‎      color: var(--gold);
+‎      border: 1px solid rgba(245,196,81,0.35);
+‎      background: rgba(245,196,81,0.08);
+‎      padding: 8px 14px;
+‎      border-radius: 50px;
+‎      font-size: 12px;
+‎      font-weight: 800;
+‎      letter-spacing: 1px;
 ‎      margin-bottom: 20px;
 ‎    }
 ‎
 ‎    .hero h1 {
-‎      font-size: clamp(38px, 8vw, 70px);
-‎      line-height: 1.05;
-‎      margin-bottom: 20px;
-‎      font-weight: 900;
+‎      font-size: clamp(42px, 7vw, 72px);
+‎      line-height: 0.98;
+‎      letter-spacing: -2px;
+‎      margin-bottom: 25px;
 ‎    }
 ‎
 ‎    .hero h1 span {
-‎      color: #facc15;
+‎      color: var(--gold);
 ‎    }
 ‎
-‎    .hero p {
-‎      max-width: 700px;
-‎      margin: 0 auto 30px;
+‎    .hero-text {
+‎      color: var(--muted);
 ‎      font-size: 18px;
-‎      color: #e5e7eb;
+‎      max-width: 650px;
+‎      margin-bottom: 30px;
 ‎    }
 ‎
-‎    .cta {
+‎    .hero-buttons {
+‎      display: flex;
+‎      flex-wrap: wrap;
+‎      gap: 14px;
+‎      align-items: center;
+‎    }
+‎
+‎    .primary-btn {
 ‎      display: inline-block;
-‎      background: #facc15;
-‎      color: #111827;
-‎      padding: 16px 28px;
+‎      background: linear-gradient(135deg, #f8d36d, #eab53e);
+‎      color: #111;
+‎      padding: 16px 25px;
 ‎      border-radius: 10px;
-‎      font-weight: 800;
-‎      font-size: 17px;
-‎      transition: 0.2s;
+‎      font-weight: 900;
+‎      box-shadow: 0 10px 30px rgba(245,196,81,0.18);
+‎      transition: 0.25s;
 ‎    }
 ‎
-‎    .cta:hover {
-‎      transform: translateY(-2px);
-‎      background: #fde047;
+‎    .primary-btn:hover {
+‎      transform: translateY(-3px);
+‎      box-shadow: 0 15px 35px rgba(245,196,81,0.28);
 ‎    }
 ‎
-‎    .small-note {
-‎      margin-top: 14px;
+‎    .secondary-btn {
+‎      display: inline-block;
+‎      color: white;
+‎      border: 1px solid rgba(255,255,255,0.15);
+‎      padding: 15px 24px;
+‎      border-radius: 10px;
+‎      font-weight: 700;
+‎    }
+‎
+‎    .trust-line {
+‎      margin-top: 18px;
+‎      color: #7f8ba2;
 ‎      font-size: 13px;
-‎      color: #d1d5db;
 ‎    }
 ‎
-‎    /* GENERAL */
+‎    /* PRODUCT MOCKUP */
+‎
+‎    .mockup-area {
+‎      display: flex;
+‎      justify-content: center;
+‎      perspective: 1000px;
+‎    }
+‎
+‎    .book {
+‎      width: 275px;
+‎      min-height: 360px;
+‎      border-radius: 8px 18px 18px 8px;
+‎      padding: 35px 28px;
+‎      background:
+‎        linear-gradient(145deg, #182541, #0a1020);
+‎      border-left: 7px solid #dcae3d;
+‎      box-shadow:
+‎        25px 30px 50px rgba(0,0,0,0.5),
+‎        inset 0 0 30px rgba(255,255,255,0.03);
+‎      transform: rotateY(-10deg) rotateX(3deg);
+‎      position: relative;
+‎    }
+‎
+‎    .book:after {
+‎      content: "";
+‎      position: absolute;
+‎      right: -15px;
+‎      top: 10px;
+‎      width: 15px;
+‎      height: calc(100% - 20px);
+‎      background: #b98d2f;
+‎      border-radius: 0 8px 8px 0;
+‎      opacity: 0.6;
+‎    }
+‎
+‎    .book-small {
+‎      color: var(--gold);
+‎      font-size: 12px;
+‎      font-weight: 900;
+‎      letter-spacing: 2px;
+‎      margin-bottom: 25px;
+‎    }
+‎
+‎    .book h2 {
+‎      font-size: 36px;
+‎      line-height: 1;
+‎      margin-bottom: 20px;
+‎    }
+‎
+‎    .book h2 span {
+‎      color: var(--gold);
+‎    }
+‎
+‎    .book-line {
+‎      width: 55px;
+‎      height: 3px;
+‎      background: var(--gold);
+‎      margin-bottom: 22px;
+‎    }
+‎
+‎    .book p {
+‎      color: #b7c0d1;
+‎      font-size: 14px;
+‎    }
+‎
+‎    .book-bottom {
+‎      position: absolute;
+‎      bottom: 25px;
+‎      left: 28px;
+‎      right: 28px;
+‎      border-top: 1px solid rgba(255,255,255,0.12);
+‎      padding-top: 12px;
+‎      color: #8490a5;
+‎      font-size: 11px;
+‎    }
+‎
+‎    /* STATS */
+‎
+‎    .stats {
+‎      border-top: 1px solid rgba(255,255,255,0.07);
+‎      border-bottom: 1px solid rgba(255,255,255,0.07);
+‎      background: #0a1020;
+‎    }
+‎
+‎    .stats-grid {
+‎      display: grid;
+‎      grid-template-columns: repeat(3, 1fr);
+‎    }
+‎
+‎    .stat {
+‎      text-align: center;
+‎      padding: 28px 10px;
+‎      border-right: 1px solid rgba(255,255,255,0.07);
+‎    }
+‎
+‎    .stat:last-child {
+‎      border-right: none;
+‎    }
+‎
+‎    .stat strong {
+‎      display: block;
+‎      color: var(--gold);
+‎      font-size: 20px;
+‎      margin-bottom: 4px;
+‎    }
+‎
+‎    .stat span {
+‎      color: var(--muted);
+‎      font-size: 13px;
+‎    }
+‎
+‎    /* SECTIONS */
+‎
 ‎    section {
-‎      padding: 70px 20px;
+‎      padding: 90px 20px;
+‎    }
+‎
+‎    .section-label {
+‎      text-align: center;
+‎      color: var(--gold);
+‎      font-size: 12px;
+‎      font-weight: 900;
+‎      letter-spacing: 2px;
+‎      text-transform: uppercase;
+‎      margin-bottom: 12px;
 ‎    }
 ‎
 ‎    .section-title {
 ‎      text-align: center;
-‎      font-size: 34px;
+‎      font-size: clamp(30px, 5vw, 46px);
+‎      line-height: 1.1;
 ‎      margin-bottom: 15px;
 ‎    }
 ‎
-‎    .section-subtitle {
+‎    .section-text {
+‎      max-width: 680px;
+‎      margin: 0 auto 45px;
 ‎      text-align: center;
-‎      max-width: 700px;
-‎      margin: 0 auto 40px;
-‎      color: #6b7280;
+‎      color: var(--muted);
 ‎    }
 ‎
 ‎    /* PROBLEM */
-‎    .problem {
-‎      background: #f8fafc;
+‎
+‎    .problem-section {
+‎      background: #0a1020;
 ‎    }
 ‎
-‎    .problem-list {
-‎      max-width: 700px;
-‎      margin: 30px auto;
+‎    .problem-grid {
 ‎      display: grid;
-‎      gap: 15px;
-‎    }
-‎
-‎    .problem-item {
-‎      background: white;
-‎      padding: 18px;
-‎      border-radius: 10px;
-‎      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-‎    }
-‎
-‎    /* PRODUCT */
-‎    .product-section {
-‎      text-align: center;
-‎    }
-‎
-‎    .product-box {
-‎      max-width: 800px;
+‎      grid-template-columns: repeat(2, 1fr);
+‎      gap: 18px;
+‎      max-width: 850px;
 ‎      margin: auto;
-‎      background: #f8fafc;
-‎      padding: 40px 25px;
-‎      border-radius: 18px;
 ‎    }
 ‎
-‎    .product-cover {
-‎      width: 230px;
-‎      height: 300px;
-‎      margin: 0 auto 30px;
-‎      background: linear-gradient(145deg, #111827, #2563eb);
-‎      color: white;
-‎      border-radius: 12px;
-‎      padding: 30px 20px;
-‎      display: flex;
-‎      flex-direction: column;
-‎      justify-content: center;
-‎      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+‎    .problem-card {
+‎      background: var(--card);
+‎      border: 1px solid rgba(255,255,255,0.07);
+‎      padding: 25px;
+‎      border-radius: 14px;
 ‎    }
 ‎
-‎    .product-cover small {
-‎      color: #facc15;
-‎      font-weight: bold;
-‎      margin-bottom: 15px;
+‎    .problem-icon {
+‎      font-size: 25px;
+‎      margin-bottom: 12px;
 ‎    }
 ‎
-‎    .product-cover h3 {
-‎      font-size: 28px;
-‎      line-height: 1.1;
+‎    .problem-card h3 {
+‎      margin-bottom: 7px;
+‎    }
+‎
+‎    .problem-card p {
+‎      color: var(--muted);
+‎      font-size: 14px;
 ‎    }
 ‎
 ‎    /* FEATURES */
-‎    .features {
-‎      background: #f8fafc;
-‎    }
 ‎
-‎    .feature-grid {
+‎    .features-grid {
 ‎      display: grid;
 ‎      grid-template-columns: repeat(3, 1fr);
 ‎      gap: 20px;
 ‎    }
 ‎
-‎    .feature {
-‎      background: white;
-‎      padding: 25px;
-‎      border-radius: 14px;
-‎      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+‎    .feature-card {
+‎      background: linear-gradient(145deg, #111a2e, #0c1425);
+‎      border: 1px solid rgba(255,255,255,0.07);
+‎      border-radius: 16px;
+‎      padding: 28px;
+‎      transition: 0.25s;
+‎    }
+‎
+‎    .feature-card:hover {
+‎      transform: translateY(-5px);
+‎      border-color: rgba(245,196,81,0.35);
 ‎    }
 ‎
 ‎    .feature-number {
-‎      width: 40px;
-‎      height: 40px;
-‎      background: #1e3a8a;
-‎      color: white;
-‎      border-radius: 50%;
 ‎      display: flex;
+‎      width: 43px;
+‎      height: 43px;
 ‎      align-items: center;
 ‎      justify-content: center;
-‎      font-weight: bold;
-‎      margin-bottom: 15px;
+‎      border-radius: 10px;
+‎      background: rgba(245,196,81,0.1);
+‎      color: var(--gold);
+‎      font-weight: 900;
+‎      margin-bottom: 20px;
 ‎    }
 ‎
-‎    .feature h3 {
-‎      margin-bottom: 8px;
+‎    .feature-card h3 {
+‎      margin-bottom: 9px;
 ‎    }
 ‎
-‎    .feature p {
-‎      color: #6b7280;
+‎    .feature-card p {
+‎      color: var(--muted);
+‎      font-size: 14px;
 ‎    }
 ‎
-‎    /* WHO */
-‎    .who-list {
-‎      max-width: 700px;
-‎      margin: 30px auto;
+‎    /* AUDIENCE */
+‎
+‎    .audience {
+‎      background: #0a1020;
 ‎    }
 ‎
-‎    .who-list div {
-‎      padding: 14px 0;
-‎      border-bottom: 1px solid #e5e7eb;
+‎    .audience-box {
+‎      max-width: 850px;
+‎      margin: auto;
+‎      background: linear-gradient(145deg, #111a2e, #0d1527);
+‎      border: 1px solid rgba(255,255,255,0.08);
+‎      border-radius: 20px;
+‎      padding: 35px;
+‎    }
+‎
+‎    .audience-item {
+‎      display: flex;
+‎      gap: 13px;
+‎      padding: 15px 0;
+‎      border-bottom: 1px solid rgba(255,255,255,0.07);
+‎      color: #dce2ec;
+‎    }
+‎
+‎    .audience-item:last-child {
+‎      border-bottom: none;
 ‎    }
 ‎
 ‎    .check {
-‎      color: #16a34a;
-‎      font-weight: bold;
-‎      margin-right: 8px;
+‎      color: var(--green);
+‎      font-weight: 900;
 ‎    }
 ‎
-‎    /* PRICE */
-‎    .price-section {
-‎      background: #111827;
-‎      color: white;
+‎    /* OFFER */
+‎
+‎    .offer {
+‎      background:
+‎        radial-gradient(circle at 50% 0%, rgba(245,196,81,0.14), transparent 40%),
+‎        #070b16;
+‎    }
+‎
+‎    .offer-box {
+‎      max-width: 750px;
+‎      margin: auto;
 ‎      text-align: center;
+‎      padding: 50px 30px;
+‎      border: 1px solid rgba(245,196,81,0.3);
+‎      border-radius: 22px;
+‎      background: linear-gradient(145deg, #121b30, #0a1020);
+‎      box-shadow: 0 25px 70px rgba(0,0,0,0.35);
+‎    }
+‎
+‎    .offer-tag {
+‎      display: inline-block;
+‎      background: var(--gold);
+‎      color: #111;
+‎      padding: 7px 14px;
+‎      border-radius: 30px;
+‎      font-weight: 900;
+‎      font-size: 12px;
+‎      margin-bottom: 20px;
 ‎    }
 ‎
 ‎    .old-price {
-‎      font-size: 20px;
-‎      color: #9ca3af;
+‎      color: #788398;
 ‎      text-decoration: line-through;
-‎      margin-top: 20px;
+‎      font-size: 18px;
 ‎    }
 ‎
-‎    .price {
-‎      font-size: 60px;
+‎    .new-price {
+‎      color: var(--gold);
+‎      font-size: clamp(55px, 10vw, 78px);
+‎      line-height: 1;
 ‎      font-weight: 900;
-‎      color: #facc15;
-‎      margin: 5px 0 20px;
+‎      margin: 5px 0 15px;
 ‎    }
 ‎
-‎    .price-description {
-‎      max-width: 600px;
-‎      margin: 0 auto 30px;
-‎      color: #d1d5db;
+‎    .offer-description {
+‎      color: var(--muted);
+‎      max-width: 570px;
+‎      margin: 0 auto 28px;
+‎    }
+‎
+‎    .guarantee {
+‎      margin-top: 18px;
+‎      color: #8f9aae;
+‎      font-size: 12px;
 ‎    }
 ‎
 ‎    /* FAQ */
+‎
 ‎    .faq {
-‎      max-width: 750px;
+‎      max-width: 800px;
 ‎      margin: auto;
 ‎    }
 ‎
 ‎    details {
-‎      background: #f8fafc;
+‎      background: #0e1729;
+‎      border: 1px solid rgba(255,255,255,0.07);
+‎      border-radius: 12px;
+‎      padding: 19px 20px;
 ‎      margin-bottom: 12px;
-‎      padding: 18px;
-‎      border-radius: 10px;
 ‎    }
 ‎
 ‎    summary {
 ‎      cursor: pointer;
-‎      font-weight: bold;
+‎      font-weight: 800;
 ‎    }
 ‎
 ‎    details p {
+‎      color: var(--muted);
 ‎      margin-top: 12px;
-‎      color: #6b7280;
-‎    }
-‎
-‎    /* FINAL CTA */
-‎    .final-cta {
-‎      text-align: center;
-‎      background: #eff6ff;
-‎    }
-‎
-‎    .final-cta p {
-‎      max-width: 650px;
-‎      margin: 15px auto 25px;
-‎      color: #4b5563;
-‎    }
-‎
-‎    /* FOOTER */
-‎    footer {
-‎      background: #030712;
-‎      color: #9ca3af;
-‎      text-align: center;
-‎      padding: 30px 20px;
 ‎      font-size: 14px;
 ‎    }
 ‎
-‎    /* MOBILE */
-‎    @media (max-width: 750px) {
+‎    /* FINAL CTA */
 ‎
-‎      section {
-‎        padding: 55px 18px;
-‎      }
+‎    .final {
+‎      text-align: center;
+‎      background:
+‎        radial-gradient(circle at center, rgba(245,196,81,0.13), transparent 45%),
+‎        #0a1020;
+‎    }
+‎
+‎    .final h2 {
+‎      font-size: clamp(34px, 6vw, 55px);
+‎      line-height: 1.05;
+‎      margin-bottom: 15px;
+‎    }
+‎
+‎    .final p {
+‎      color: var(--muted);
+‎      max-width: 620px;
+‎      margin: 0 auto 28px;
+‎    }
+‎
+‎    /* FOOTER */
+‎
+‎    footer {
+‎      background: #04060d;
+‎      padding: 35px 20px 90px;
+‎      text-align: center;
+‎      color: #687389;
+‎      font-size: 12px;
+‎    }
+‎
+‎    footer strong {
+‎      color: #aeb7c8;
+‎    }
+‎
+‎    /* MOBILE CTA */
+‎
+‎    .mobile-buy {
+‎      display: none;
+‎    }
+‎
+‎    /* MOBILE */
+‎
+‎    @media (max-width: 800px) {
 ‎
 ‎      .hero {
-‎        padding: 55px 18px 65px;
+‎        padding-top: 65px;
 ‎      }
 ‎
-‎      .hero p {
-‎        font-size: 16px;
+‎      .hero-grid {
+‎        grid-template-columns: 1fr;
+‎        text-align: center;
 ‎      }
 ‎
-‎      .feature-grid {
+‎      .hero-text {
+‎        margin-left: auto;
+‎        margin-right: auto;
+‎      }
+‎
+‎      .hero-buttons {
+‎        justify-content: center;
+‎      }
+‎
+‎      .mockup-area {
+‎        margin-top: 25px;
+‎      }
+‎
+‎      .book {
+‎        width: 245px;
+‎        min-height: 325px;
+‎      }
+‎
+‎      .stats-grid {
 ‎        grid-template-columns: 1fr;
 ‎      }
 ‎
-‎      .section-title {
-‎        font-size: 28px;
+‎      .stat {
+‎        border-right: none;
+‎        border-bottom: 1px solid rgba(255,255,255,0.07);
 ‎      }
 ‎
-‎      .price {
-‎        font-size: 48px;
+‎      .stat:last-child {
+‎        border-bottom: none;
 ‎      }
 ‎
-‎      .cta {
+‎      .problem-grid,
+‎      .features-grid {
+‎        grid-template-columns: 1fr;
+‎      }
+‎
+‎      .audience-box {
+‎        padding: 25px;
+‎      }
+‎
+‎      .mobile-buy {
+‎        display: block;
+‎        position: fixed;
+‎        bottom: 0;
+‎        left: 0;
+‎        right: 0;
+‎        z-index: 9999;
+‎        background: rgba(7,11,22,0.96);
+‎        padding: 10px 14px;
+‎        border-top: 1px solid rgba(255,255,255,0.1);
+‎        backdrop-filter: blur(10px);
+‎      }
+‎
+‎      .mobile-buy a {
+‎        display: block;
+‎        text-align: center;
+‎        background: var(--gold);
+‎        color: #111;
+‎        padding: 13px;
+‎        border-radius: 9px;
+‎        font-weight: 900;
+‎      }
+‎    }
+‎
+‎    @media (max-width: 500px) {
+‎
+‎      .nav-button {
+‎        font-size: 11px;
+‎        padding: 9px 12px;
+‎      }
+‎
+‎      .hero h1 {
+‎        letter-spacing: -1.5px;
+‎      }
+‎
+‎      .hero-buttons a {
 ‎        width: 100%;
-‎        max-width: 350px;
+‎        text-align: center;
+‎      }
+‎
+‎      .book {
+‎        transform: none;
+‎      }
+‎
+‎      .offer-box {
+‎        padding: 40px 20px;
 ‎      }
 ‎    }
 ‎  </style>
@@ -330,337 +655,517 @@
 ‎
 ‎<body>
 ‎
-‎  <!-- HERO -->
-‎  <header class="hero">
-‎    <div class="container">
+‎  <!-- NAVIGATION -->
 ‎
-‎      <div class="badge">BEGINNER-FRIENDLY GUIDE</div>
+‎  <nav>
+‎    <div class="container nav-inner">
 ‎
-‎      <h1>
-‎        AFFILIATE SALES<br>
-‎        <span>BLUEPRINT</span>
-‎      </h1>
+‎      <div class="logo">
+‎        AFFILIATE <span>SALES</span>
+‎      </div>
 ‎
-‎      <p>
-‎        A simple step-by-step guide to understanding affiliate marketing,
-‎        finding potential buyers, creating content and generating more sales online.
-‎      </p>
-‎
-‎      <a class="cta"
-‎         href="https://selar.com/676673m75x"
-‎         target="_blank">
-‎        GET THE BLUEPRINT — ₦2,000
+‎      <a
+‎        class="nav-button"
+‎        href="YOUR_PAYMENT_LINK_HERE"
+‎        target="_blank"
+‎      >
+‎        GET IT — ₦2,000
 ‎      </a>
 ‎
-‎      <div class="small-note">
-‎        Simple • Practical • Beginner-Friendly
+‎    </div>
+‎  </nav>
+‎
+‎
+‎  <!-- HERO -->
+‎
+‎  <header class="hero">
+‎
+‎    <div class="container hero-grid">
+‎
+‎      <div>
+‎
+‎        <div class="eyebrow">
+‎          THE BEGINNER'S AFFILIATE MARKETING GUIDE
+‎        </div>
+‎
+‎        <h1>
+‎          Stop Guessing.<br>
+‎          Start Making <span>Better Sales.</span>
+‎        </h1>
+‎
+‎        <p class="hero-text">
+‎          Affiliate Sales Blueprint gives you a simple roadmap for
+‎          choosing products, finding potential buyers, creating useful
+‎          content and understanding the process behind affiliate sales.
+‎        </p>
+‎
+‎        <div class="hero-buttons">
+‎
+‎          <a
+‎            class="primary-btn"
+‎            href="YOUR_PAYMENT_LINK_HERE"
+‎            target="_blank"
+‎          >
+‎            GET THE BLUEPRINT — ₦2,000
+‎          </a>
+‎
+‎          <a
+‎            class="secondary-btn"
+‎            href="#inside"
+‎          >
+‎            SEE WHAT'S INSIDE ↓
+‎          </a>
+‎
+‎        </div>
+‎
+‎        <div class="trust-line">
+‎          ✓ Beginner-friendly &nbsp; • &nbsp;
+‎          ✓ Simple language &nbsp; • &nbsp;
+‎          ✓ Step-by-step
+‎        </div>
+‎
+‎      </div>
+‎
+‎
+‎      <!-- PRODUCT COVER -->
+‎
+‎      <div class="mockup-area">
+‎
+‎        <div class="book">
+‎
+‎          <div class="book-small">
+‎            THE SIMPLE GUIDE
+‎          </div>
+‎
+‎          <h2>
+‎            AFFILIATE<br>
+‎            <span>SALES</span><br>
+‎            BLUEPRINT
+‎          </h2>
+‎
+‎          <div class="book-line"></div>
+‎
+‎          <p>
+‎            A practical roadmap for beginners who want to understand
+‎            affiliate marketing and learn how to generate sales online.
+‎          </p>
+‎
+‎          <div class="book-bottom">
+‎            DIGITAL GUIDE • 2026
+‎          </div>
+‎
+‎        </div>
+‎
 ‎      </div>
 ‎
 ‎    </div>
+‎
 ‎  </header>
 ‎
 ‎
+‎  <!-- STATS -->
+‎
+‎  <div class="stats">
+‎
+‎    <div class="container stats-grid">
+‎
+‎      <div class="stat">
+‎        <strong>STEP-BY-STEP</strong>
+‎        <span>Easy-to-follow approach</span>
+‎      </div>
+‎
+‎      <div class="stat">
+‎        <strong>BEGINNER</strong>
+‎        <span>No previous experience required</span>
+‎      </div>
+‎
+‎      <div class="stat">
+‎        <strong>₦2,000</strong>
+‎        <span>Launch price</span>
+‎      </div>
+‎
+‎    </div>
+‎
+‎  </div>
+‎
+‎
 ‎  <!-- PROBLEM -->
-‎  <section class="problem">
+‎
+‎  <section class="problem-section">
+‎
 ‎    <div class="container">
 ‎
+‎      <div class="section-label">
+‎        THE PROBLEM
+‎      </div>
+‎
 ‎      <h2 class="section-title">
-‎        Struggling to Get Affiliate Sales?
+‎        Affiliate Marketing Can Feel Confusing
 ‎      </h2>
 ‎
-‎      <p class="section-subtitle">
-‎        Having an affiliate link is easy. Knowing how to get the right people
-‎        interested in what you're promoting is where things get confusing.
+‎      <p class="section-text">
+‎        You can have an affiliate link and still have no idea what to
+‎        do next. The Blueprint helps you understand the basic process.
 ‎      </p>
 ‎
-‎      <div class="problem-list">
+‎      <div class="problem-grid">
 ‎
-‎        <div class="problem-item">
-‎          ❌ You don't know what products to promote.
+‎        <div class="problem-card">
+‎          <div class="problem-icon">🎯</div>
+‎          <h3>Don't Know What To Promote?</h3>
+‎          <p>
+‎            Choosing an offer can be confusing when you're just starting.
+‎          </p>
 ‎        </div>
 ‎
-‎        <div class="problem-item">
-‎          ❌ You don't know where to find potential buyers.
+‎        <div class="problem-card">
+‎          <div class="problem-icon">👥</div>
+‎          <h3>Can't Find Potential Buyers?</h3>
+‎          <p>
+‎            Learn how to think about your target audience and where they
+‎            may spend time online.
+‎          </p>
 ‎        </div>
 ‎
-‎        <div class="problem-item">
-‎          ❌ You don't know what content to create.
+‎        <div class="problem-card">
+‎          <div class="problem-icon">📱</div>
+‎          <h3>Don't Know What To Post?</h3>
+‎          <p>
+‎            Get simple ideas for creating content around what you're promoting.
+‎          </p>
 ‎        </div>
 ‎
-‎        <div class="problem-item">
-‎          ❌ You're getting attention but struggling to turn it into sales.
-‎        </div>
-‎
-‎        <div class="problem-item">
-‎          ❌ You keep trying random strategies without a clear plan.
+‎        <div class="problem-card">
+‎          <div class="problem-icon">📉</div>
+‎          <h3>Getting Attention But No Sales?</h3>
+‎          <p>
+‎            Understand the difference between getting attention and
+‎            guiding interested people toward an offer.
+‎          </p>
 ‎        </div>
 ‎
 ‎      </div>
 ‎
 ‎    </div>
-‎  </section>
 ‎
-‎
-‎  <!-- PRODUCT -->
-‎  <section class="product-section">
-‎    <div class="container">
-‎
-‎      <h2 class="section-title">
-‎        Meet the Affiliate Sales Blueprint
-‎      </h2>
-‎
-‎      <p class="section-subtitle">
-‎        A practical guide created to help beginners understand the basic
-‎        process of generating affiliate sales online.
-‎      </p>
-‎
-‎      <div class="product-box">
-‎
-‎        <div class="product-cover">
-‎          <small>THE</small>
-‎          <h3>AFFILIATE<br>SALES<br>BLUEPRINT</h3>
-‎        </div>
-‎
-‎        <p>
-‎          Instead of jumping between random videos and strategies,
-‎          use one simple roadmap to understand the important steps
-‎          involved in affiliate marketing.
-‎        </p>
-‎
-‎      </div>
-‎
-‎    </div>
 ‎  </section>
 ‎
 ‎
 ‎  <!-- WHAT'S INSIDE -->
-‎  <section class="features">
+‎
+‎  <section id="inside">
+‎
 ‎    <div class="container">
 ‎
+‎      <div class="section-label">
+‎        WHAT YOU'LL LEARN
+‎      </div>
+‎
 ‎      <h2 class="section-title">
-‎        What's Inside?
+‎        Inside The Blueprint
 ‎      </h2>
 ‎
-‎      <p class="section-subtitle">
-‎        Here's what you'll learn inside the blueprint.
+‎      <p class="section-text">
+‎        A straightforward introduction to the important parts of
+‎        generating affiliate sales online.
 ‎      </p>
 ‎
-‎      <div class="feature-grid">
 ‎
-‎        <div class="feature">
-‎          <div class="feature-number">1</div>
-‎          <h3>Choose the Right Product</h3>
+‎      <div class="features-grid">
+‎
+‎        <div class="feature-card">
+‎          <div class="feature-number">01</div>
+‎          <h3>Choose The Right Product</h3>
 ‎          <p>
-‎            Learn what to consider when choosing an affiliate product to promote.
+‎            Learn what to consider when deciding which affiliate
+‎            products may be worth promoting.
 ‎          </p>
 ‎        </div>
 ‎
-‎        <div class="feature">
-‎          <div class="feature-number">2</div>
-‎          <h3>Find Your Audience</h3>
+‎        <div class="feature-card">
+‎          <div class="feature-number">02</div>
+‎          <h3>Understand Your Audience</h3>
 ‎          <p>
-‎            Understand who is most likely to be interested in your offer.
+‎            Learn why understanding the people you're trying to reach
+‎            matters.
 ‎          </p>
 ‎        </div>
 ‎
-‎        <div class="feature">
-‎          <div class="feature-number">3</div>
-‎          <h3>Create Content</h3>
+‎        <div class="feature-card">
+‎          <div class="feature-number">03</div>
+‎          <h3>Create Useful Content</h3>
 ‎          <p>
-‎            Discover simple content ideas that can attract attention online.
+‎            Explore simple content ideas that can help attract people
+‎            interested in your topic.
 ‎          </p>
 ‎        </div>
 ‎
-‎        <div class="feature">
-‎          <div class="feature-number">4</div>
+‎        <div class="feature-card">
+‎          <div class="feature-number">04</div>
 ‎          <h3>Generate Leads</h3>
 ‎          <p>
-‎            Learn practical ways to get potential customers interested in your offer.
+‎            Understand the basic idea behind getting potential customers
+‎            interested in an offer.
 ‎          </p>
 ‎        </div>
 ‎
-‎        <div class="feature">
-‎          <div class="feature-number">5</div>
-‎          <h3>Turn Interest Into Sales</h3>
+‎        <div class="feature-card">
+‎          <div class="feature-number">05</div>
+‎          <h3>Understand The Sales Process</h3>
 ‎          <p>
-‎            Understand how to guide interested people toward making a purchase.
+‎            Learn how attention, interest and offers can fit together.
 ‎          </p>
 ‎        </div>
 ‎
-‎        <div class="feature">
-‎          <div class="feature-number">6</div>
+‎        <div class="feature-card">
+‎          <div class="feature-number">06</div>
 ‎          <h3>Avoid Common Mistakes</h3>
 ‎          <p>
-‎            Learn some common beginner mistakes and how to avoid them.
+‎            Discover mistakes beginners often make when starting out.
 ‎          </p>
 ‎        </div>
 ‎
 ‎      </div>
 ‎
 ‎    </div>
+‎
 ‎  </section>
 ‎
 ‎
 ‎  <!-- WHO IT'S FOR -->
-‎  <section>
+‎
+‎  <section class="audience">
+‎
 ‎    <div class="container">
 ‎
+‎      <div class="section-label">
+‎        WHO IT'S FOR
+‎      </div>
+‎
 ‎      <h2 class="section-title">
-‎        Is This Blueprint For You?
+‎        Built For Beginners
 ‎      </h2>
 ‎
-‎      <p class="section-subtitle">
-‎        This guide is designed for beginners who want a clearer starting point.
+‎      <p class="section-text">
+‎        You don't need to be an expert. This guide is designed to give
+‎        beginners a clearer starting point.
 ‎      </p>
 ‎
-‎      <div class="who-list">
 ‎
-‎        <div>
+‎      <div class="audience-box">
+‎
+‎        <div class="audience-item">
 ‎          <span class="check">✓</span>
-‎          You're new to affiliate marketing.
+‎          <span>You're completely new to affiliate marketing.</span>
 ‎        </div>
 ‎
-‎        <div>
+‎        <div class="audience-item">
 ‎          <span class="check">✓</span>
-‎          You're trying to get your first affiliate sales.
+‎          <span>You're trying to understand how affiliate sales work.</span>
 ‎        </div>
 ‎
-‎        <div>
+‎        <div class="audience-item">
 ‎          <span class="check">✓</span>
-‎          You're unsure what content to post.
+‎          <span>You don't know what content to create.</span>
 ‎        </div>
 ‎
-‎        <div>
+‎        <div class="audience-item">
 ‎          <span class="check">✓</span>
-‎          You're struggling to find potential buyers.
+‎          <span>You're struggling to identify potential buyers.</span>
 ‎        </div>
 ‎
-‎        <div>
+‎        <div class="audience-item">
 ‎          <span class="check">✓</span>
-‎          You want a simple roadmap to follow.
+‎          <span>You want a simple roadmap instead of random information.</span>
 ‎        </div>
 ‎
-‎        <div>
+‎        <div class="audience-item">
 ‎          <span class="check">✓</span>
-‎          You're ready to learn and take action.
+‎          <span>You're ready to learn and put what you learn into practice.</span>
 ‎        </div>
 ‎
 ‎      </div>
 ‎
 ‎    </div>
+‎
 ‎  </section>
 ‎
 ‎
-‎  <!-- PRICE -->
-‎  <section class="price-section">
+‎  <!-- OFFER -->
+‎
+‎  <section class="offer">
+‎
 ‎    <div class="container">
 ‎
-‎      <h2 class="section-title">
-‎        Start Your Affiliate Sales Journey
-‎      </h2>
-‎
-‎      <div class="old-price">
-‎        Regular Value: ₦5,000
+‎      <div class="section-label">
+‎        SPECIAL LAUNCH OFFER
 ‎      </div>
 ‎
-‎      <div class="price">
-‎        ₦2,000
-‎      </div>
+‎      <div class="offer-box">
 ‎
-‎      <p class="price-description">
-‎        Get the Affiliate Sales Blueprint and learn the basic process
-‎        of finding potential buyers, creating content and generating
-‎        affiliate sales online.
-‎      </p>
+‎        <div class="offer-tag">
+‎          LIMITED LAUNCH PRICE
+‎        </div>
 ‎
-‎      <a class="cta"
-‎         href="https://selar.com/676673m75x"
-‎         target="_blank">
-‎        GET ACCESS NOW — ₦2,000
-‎      </a>
+‎        <h2>
+‎          Get The Affiliate Sales Blueprint
+‎        </h2>
 ‎
-‎      <div class="small-note">
-‎        Launch price
+‎        <div class="old-price">
+‎          Regular Value: ₦5,000
+‎        </div>
+‎
+‎        <div class="new-price">
+‎          ₦2,000
+‎        </div>
+‎
+‎        <p class="offer-description">
+‎          Get the beginner-friendly guide and start learning the
+‎          fundamentals of finding potential buyers, creating content
+‎          and understanding the affiliate sales process.
+‎        </p>
+‎
+‎        <a
+‎          class="primary-btn"
+‎          href="https://selar.com/676673m75x"
+‎          target="_blank"
+‎        >
+‎          GET ACCESS NOW — ₦2,000
+‎        </a>
+‎
+‎        <div class="guarantee">
+‎          Educational guide • Beginner-friendly • No guaranteed income
+‎        </div>
+‎
 ‎      </div>
 ‎
 ‎    </div>
+‎
 ‎  </section>
 ‎
 ‎
 ‎  <!-- FAQ -->
+‎
 ‎  <section>
+‎
 ‎    <div class="container">
+‎
+‎      <div class="section-label">
+‎        QUESTIONS
+‎      </div>
 ‎
 ‎      <h2 class="section-title">
 ‎        Frequently Asked Questions
 ‎      </h2>
 ‎
+‎      <p class="section-text">
+‎        Everything you need to know before getting started.
+‎      </p>
+‎
+‎
 ‎      <div class="faq">
 ‎
 ‎        <details>
 ‎          <summary>Is this guide for beginners?</summary>
+‎
 ‎          <p>
-‎            Yes. The guide is designed to explain the basic concepts
-‎            in simple language for people who are getting started.
+‎            Yes. The Blueprint is written in simple language and is
+‎            designed to give beginners a clearer understanding of
+‎            affiliate marketing and the sales process.
 ‎          </p>
 ‎        </details>
 ‎
+‎
 ‎        <details>
-‎          <summary>Do I need previous affiliate marketing experience?</summary>
+‎          <summary>Do I need previous experience?</summary>
+‎
 ‎          <p>
-‎            No. The blueprint is designed as a starting point for beginners.
+‎            No. You can start with little or no previous affiliate
+‎            marketing experience.
 ‎          </p>
 ‎        </details>
+‎
+‎
+‎        <details>
+‎          <summary>What will I learn?</summary>
+‎
+‎          <p>
+‎            You'll learn about choosing products, understanding your
+‎            audience, creating content, generating leads and understanding
+‎            the basic process of turning interest into sales.
+‎          </p>
+‎        </details>
+‎
 ‎
 ‎        <details>
 ‎          <summary>How will I receive the guide?</summary>
+‎
 ‎          <p>
 ‎            After completing your purchase, follow the delivery instructions
-‎            provided on the checkout page.
+‎            provided on your checkout page.
 ‎          </p>
 ‎        </details>
 ‎
+‎
 ‎        <details>
-‎          <summary>Does the guide guarantee sales?</summary>
+‎          <summary>Does this guarantee that I will make money?</summary>
+‎
 ‎          <p>
-‎            No. Results depend on factors such as your product, audience,
-‎            content, consistency and execution. The blueprint provides
-‎            practical guidance, not a guarantee of income.
+‎            No. Affiliate marketing results vary. Your results depend on
+‎            factors such as your product, audience, content, consistency
+‎            and execution. This guide provides educational information
+‎            and does not guarantee income.
 ‎          </p>
 ‎        </details>
 ‎
 ‎      </div>
 ‎
 ‎    </div>
+‎
 ‎  </section>
 ‎
 ‎
 ‎  <!-- FINAL CTA -->
-‎  <section class="final-cta">
+‎
+‎  <section class="final">
+‎
 ‎    <div class="container">
 ‎
-‎      <h2 class="section-title">
-‎        Stop Guessing. Start Learning.
+‎      <div class="section-label">
+‎        YOUR NEXT STEP
+‎      </div>
+‎
+‎      <h2>
+‎        Ready To Learn<br>
+‎        The Blueprint?
 ‎      </h2>
 ‎
 ‎      <p>
-‎        You don't need to know everything before you start.
-‎        Give yourself a clear roadmap and begin learning the process
-‎        of generating affiliate sales online.
+‎        Stop jumping between random strategies. Start with a simple
+‎        roadmap and learn the fundamentals of generating affiliate sales.
 ‎      </p>
 ‎
-‎      <a class="cta"
-‎         href="https://selar.com/676673m75x"
-‎         target="_blank">
+‎      <a
+‎        class="primary-btn"
+‎        href="https://selar.com/676673m75x"
+‎        target="_blank"
+‎      >
 ‎        GET THE BLUEPRINT — ₦2,000
 ‎      </a>
 ‎
 ‎    </div>
+‎
 ‎  </section>
 ‎
 ‎
 ‎  <!-- FOOTER -->
+‎
 ‎  <footer>
+‎
+‎    <p>
+‎      <strong>Affiliate Sales Blueprint</strong>
+‎    </p>
+‎
 ‎    <p>
 ‎      © 2026 Affiliate Sales Blueprint. All rights reserved.
 ‎    </p>
@@ -669,7 +1174,22 @@
 ‎      This product provides educational information and does not guarantee
 ‎      specific financial results.
 ‎    </p>
+‎
 ‎  </footer>
+‎
+‎
+‎  <!-- MOBILE BUY BUTTON -->
+‎
+‎  <div class="mobile-buy">
+‎
+‎    <a
+‎      href="https://selar.com/676673m75x"
+‎      target="_blank"
+‎    >
+‎      GET THE BLUEPRINT — ₦2,000
+‎    </a>
+‎
+‎  </div>
 ‎
 ‎</body>
 ‎</html>
